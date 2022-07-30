@@ -13,17 +13,17 @@ class Good(Money):
 
     def get_tovar(self):
         self.rub = float(self.rub)
-        itog = float((self.rub - ((self.rub * self.proc) // 100)))
+        itog = float((self.rub - ((self.rub * self.proc) / 100)))
         if self.proc > 100 or self.proc <= 0:
             print('Не правильный процент')
         else:
             print(f'Общая сумма = {self.rub} руб, '
-                  f'процент от этой суммы = {((self.rub * self.proc) // 100)} За товар: {itog}')
+                  f'процент от этой суммы = {((self.rub * self.proc) / 100)} За товар: {itog}')
 
 
 
 
-sum = Good(100.0, 25)
+sum = Good(150.00, 35)
 sum.get_count()
 sum.get_tovar()
 
