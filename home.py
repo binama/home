@@ -23,7 +23,7 @@ class Good(Money):
 
 
 
-sum = Good(100.55, 33)
+sum = Good(100.0, 25)
 sum.get_count()
 sum.get_tovar()
 
