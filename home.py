@@ -7,13 +7,13 @@ class Money:
     def get_count(self):
         self.rub = str(self.rub)
         x = self.rub.split('.')
-        return print(f'У вас есть {x[:-1]}  рублей и {x[1:]}  копеек')
+        return print(f'У вас есть {x[:-1]} рублей и {x[1:]}  копеек')
 
 class Good(Money):
 
     def get_tovar(self):
         self.rub = float(self.rub)
-        itog = float((self.rub - ((self.rub * self.proc) / 100)))
+        itog = float((self.rub - ((self.rub * self.proc) // 100)))
         if self.proc > 100 or self.proc <= 0:
             print('Не правильный процент')
         else:
@@ -23,7 +23,7 @@ class Good(Money):
 
 
 
-sum = Good(150.00, 35)
+sum = Good('150.30', 25)
 sum.get_count()
 sum.get_tovar()
 
